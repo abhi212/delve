@@ -256,9 +256,11 @@ func testFlags() []string {
 		log.Fatal(err)
 	}
 	testFlags := []string{"-count", "1", "-p", "1"}
+	/************************
 	if Verbose {
 		testFlags = append(testFlags, "-v")
 	}
+	*************************/
 	if runtime.GOOS == "darwin" {
 		testFlags = append(testFlags, "-exec="+wd+"/scripts/testsign")
 	}
